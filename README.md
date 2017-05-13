@@ -6,4 +6,6 @@ I am currently learning Python using free resources on the web. GitHub will be u
 
 ##### *Python Cookbook (O'Reilly)* - David Beazley & Brian K. Jones
 
-##### *GitHub Cheat Sheet*
+##### *GitHub Cheatsheet*
+
+##### *Skillcrush Mac Terminal Cheatsheet*

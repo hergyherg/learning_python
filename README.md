@@ -5,3 +5,5 @@ I am currently learning Python using free resources on the web. GitHub will be u
 ##### *Fluent Python (O'Reilly): Clear, Concise, and Effective Programming* - Luciano Ramalho
 
 ##### *Python Cookbook (O'Reilly)* - David Beazley & Brian K. Jones
+
+##### *GitHub Cheat Sheet*

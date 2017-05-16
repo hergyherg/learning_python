@@ -1,14 +1,26 @@
-# Standard with Python3.6
+# More information around ftp and its purposes and uses
+#
+#
+#
+# ftp_client.py
+# Wil Hergenrader
+# v1.1 5.15.2017
+#------------------------------------------------------------
+
+
+# Import useful models, all standard with Python3.6
 import ftplib, os, sys, socket
 
-DOWNLOAD = '/download/' # Download folder
-UPLOAD = '/upload/' # Upload folder
+# Set download/upload folders to be used in retrieving and storing files on ftp
+DOWNLOAD = 'parent/download/'
+UPLOAD = 'parent/upload/'
 
-# Use os to move to files where you want to download files
+# Use os to move to files where you want to download/upload files
 os.chdir(os.curdir+DOWNLOAD)
 
 
 # Open File Transfer Protocol (FTP)
+# TIGER database is a subdirectory of ftp2.census.gov host ftp
 url = 'ftp2.census.gov'
 try:
     ftp = ftplib.FTP(url)
@@ -17,7 +29,8 @@ except (socket.error, socket.gaierror) as e:
     print('ERROR: cannot reach "%s"' % url)
     ftp.quit()
 
-# username and password: strs | may be optional
+# Login to ftp, username and password optional in some cases
+# type(username, passwd): strs
 username = None
 passwd = None
 try:
@@ -30,7 +43,7 @@ except ftplib.error_perm:
 
 
 
-# Move to desired folder location
+# Move to desired folder location, TIGER DATABASE and ROADS GIS DATA
 toFolder = '/geo/tiger/TIGER2016/ROADS/'
 try:
     ftp.cwd(toFolder)
